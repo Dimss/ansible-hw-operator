@@ -1,0 +1,5 @@
+---
+- version: v1alpha1
+  group: hw.okto.io.com
+  kind: HelloWorld
+  playbook: /opt/ansible/hw.yml

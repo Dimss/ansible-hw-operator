@@ -1,0 +1,4 @@
+- name: Deploy Nginx instance
+  k8s:
+    state: "{{ state }}"
+    definition: "{{ lookup('template', 'templates/nginx-deployment.yaml') }}"

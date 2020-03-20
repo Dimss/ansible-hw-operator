@@ -1,0 +1,4 @@
+---
+# defaults file for helloworld
+nginx_image: docker.io/dimssss/nginx-for-ocp:0.1
+state: present # present or absent
