@@ -16,4 +16,4 @@
 - name: Create route for Nginx instance
   k8s:
     state: "{{ state }}"
-    definition: "{{ lookup('template', 'templates/service.yaml') }}"
+    definition: "{{ lookup('template', 'templates/route.yaml') }}"

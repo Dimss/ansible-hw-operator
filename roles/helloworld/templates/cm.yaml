@@ -5,4 +5,4 @@ metadata:
   namespace: {{meta.namespace}}
 data:
   index.html: |
-    {{spec.message}}
+    {{message}}

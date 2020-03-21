@@ -4,6 +4,7 @@ metadata:
   name: "{{meta.name}}"
   namespace: "{{meta.namespace}}"
 spec:
+  termination: edge
   port:
     targetPort: 8080
   to:
