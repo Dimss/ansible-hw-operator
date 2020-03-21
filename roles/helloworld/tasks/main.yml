@@ -3,12 +3,17 @@
     state: "{{ state }}"
     definition: "{{ lookup('template', 'templates/cm.yaml') }}"
 
-- name: Deploy Nginx instance
+- name: Create Nginx instance
   k8s:
     state: "{{ state }}"
     definition: "{{ lookup('template', 'templates/nginx-deployment.yaml') }}"
 
-- name: Deploy service for Nginx instance
+- name: Create service for Nginx instance
+  k8s:
+    state: "{{ state }}"
+    definition: "{{ lookup('template', 'templates/service.yaml') }}"
+
+- name: Create route for Nginx instance
   k8s:
     state: "{{ state }}"
     definition: "{{ lookup('template', 'templates/service.yaml') }}"
