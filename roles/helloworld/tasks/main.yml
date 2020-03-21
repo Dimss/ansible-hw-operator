@@ -1,4 +1,14 @@
+- name: Create website configmap
+  k8s:
+    state: "{{ state }}"
+    definition: "{{ lookup('template', 'templates/cm.yaml') }}"
+
 - name: Deploy Nginx instance
   k8s:
     state: "{{ state }}"
     definition: "{{ lookup('template', 'templates/nginx-deployment.yaml') }}"
+
+- name: Deploy service for Nginx instance
+  k8s:
+    state: "{{ state }}"
+    definition: "{{ lookup('template', 'templates/service.yaml') }}"
